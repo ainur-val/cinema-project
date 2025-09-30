@@ -16,9 +16,10 @@
   
 ## Сайт
 
-https://
+https://ainur-val.github.io/cinema-project/
 
 ### Вход в админку
 
 Логин: shfe-diplom@netology.ru
+
 Пароль: shfe-diplom
