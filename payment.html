@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оплата билетов: Идёмвкино</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__logo">
+          <a class="header__logo_link" href="index.html"
+            >Идём<span class="header__logo_letter">в</span>кино</a
+          >
+        </h1>
+      </header>
+
+      <main class="main">
+        <div class="payment__header">
+          <h2 class="payment__header-text">Вы выбрали билеты:</h2>
+        </div>
+
+        <section class="ticket__info-wrapper">
+          <div class="ticket__info">
+            <p class="ticket__info-text">
+              На фильм:
+              <span class="ticket__info-movie ticket__info-bold"
+                >Название фильма</span
+              >
+            </p>
+            <p class="ticket__info-text">
+              Ряд/Место:
+              <span class="ticket__info-places ticket__info-bold"></span>
+            </p>
+            <p class="ticket__info-text">
+              В зале:
+              <span class="ticket__info-hall ticket__info-bold"
+                >Название зала</span
+              >
+            </p>
+            <p class="ticket__info-text">
+              Начало сеанса:
+              <span class="ticket__info-time ticket__info-bold">Время</span>
+            </p>
+            <p class="ticket__info-text">
+              Стоимость:
+              <span class="ticket__info-price ticket__info-bold">0</span> рублей
+            </p>
+          </div>
+
+          <button class="ticket__button button">
+            Получить код бронирования
+          </button>
+
+          <div class="ticket__hint">
+            <p class="ticket__hint-text">
+              После оплаты билет будет доступен в этом окне, а также придёт вам
+              на почту. Покажите QR-код нашему контроллёру у входа в зал.
+            </p>
+
+            <p class="ticket__hint-text">Приятного просмотра!</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/payment.js"></script>
+  </body>
+</html>

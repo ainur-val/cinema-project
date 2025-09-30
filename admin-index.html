@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Администраторская: Идёмвкино</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="admin__container">
+    <header class="header header__admin">
+      <h1 class="header__logo"><a class="header__logo_link" href="index.html">Идём<span class="header__logo_letter">в</span>кино</a></h1>
+      <p class="header__subtitle">Администраторская</p>
+    </header>
+
+    <main class="admin__main">
+      <section class="admin__section halls">
+        <div class="admin__header">
+          <h2 class="admin__header_text admin__header_text-first">Управление залами</h2>
+          <img src="./images/arrow.png" alt="Скрыть/раскрыть раздел" class="admin__header_arrow">
+        </div>
+
+        <div class="admin__wrapper">
+          <p class="admin__info halls__info">Доступные залы:</p>
+
+          <ul class="halls__list">
+          </ul>
+            
+          <button class="admin__button_hall button">Создать зал</button>
+        </div>
+      </section>
+
+      <section class="admin__section hall-config">
+        <div class="admin__header">
+          <h2 class="admin__header_text">Конфигурация залов</h2>
+          <img src="./images/arrow.png" alt="Скрыть/раскрыть раздел" class="admin__header_arrow">
+        </div>
+
+        <div class="admin__wrapper">
+          <p class="admin__info">Выберите зал для конфигурации:</p>
+          <ul class="halls_choose hall-config__list">
+          </ul>
+
+          <div class="hall-config__wrapper">
+           
+            <p class="admin_info">Укажите количество рядов и максимальное количество кресел в ряду:</p>
+            
+            <form class="hall-config__size">
+              <label class="hall-config__size_rows admin_label">
+                  Рядов, шт
+                  <input type="number" id="rows" class="admin_input hall-config__rows" value="10" min="1" max="50">
+              </label>
+              <p class="hall-size">x</p>
+              <label class="hall-config__size_places admin_label">
+                  Мест, шт
+                  <input type="number" id="places" class="admin_input hall-config__places" value="8" min="1" max="50">
+              </label>
+            </form>
+
+            <p class="admin__info">Теперь вы можете указать типы кресел на схеме зала:</p>
+
+            <div class="hall-config__types">
+              <div class="hall-config__type_place"> 
+                <span class="place_standart"></span> — обычные кресла
+              </div>
+              <div class="hall-config__type_place">
+                <span class="place_vip"></span> — VIP кресла
+              </div>
+              <div class="hall-config__type_place">
+                <span class="place_block"></span> — заблокированные (нет кресла)</p>
+              </div>
+            </div>
+
+            <p class="hall-config__hint">Чтобы изменить вид кресла, нажмите</p>
+
+            <div class="hall-config__hall">
+              <div class="hall-config__hall_screen">экран</div>
+
+              <div class="hall-config__hall_wrapper">
+              </div>
+
+            </div>
+
+            <div class="hall-config__buttons">
+              <button class="admin__button_cancel hall-config__batton_cancel button_disabled button">Отмена</button>
+              <button class="admin__button_save hall-config__batton_save button_disabled button">Сохранить</button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="admin__section price-config">
+        <div class="admin__header">
+          <h2 class="admin__header_text">Конфигурация цен</h2>
+          <img src="./images/arrow.png" alt="Скрыть/раскрыть раздел" class="admin__header_arrow">
+        </div>
+
+        <div class="admin__wrapper">
+          <p class="admin__info">Выберите зал для конфигурации:</p>
+          <ul class="halls_choose price-config__list">
+          </ul>
+
+          <div class="price-config__wrapper">
+
+            <p class="admin__info">Установите цены для типов кресел:</p>
+
+            <form class="price-config__form">
+
+              <div class="price-config__legend">
+                <label class="admin_label price-config__label">
+                  Цена, рублей
+                  <input type="number" class="admin_input price-config__input_standart" placeholder="0" min="0">
+                </label>
+                <p class="price-config__legend_text"> за <span class="price-config__chair place_standart"></span> обычные кресла</p>
+              </div>
+            
+              <div class="price-config__legend">
+                <label class="admin_label price-config__label">
+                  Цена, рублей
+                  <input type="number" class="admin_input price-config__input_vip" placeholder="350" min="0">
+                </label>
+                <p class="price-config__legend_text"> за <span class="price-config__chair place_vip"></span> VIP кресла</p>
+              </div>
+
+            </form>
+
+            <div class="price-config__buttons">
+              <button class="admin__button_cancel price-config__batton_cancel button_disabled button" type="reset">Отмена</button>
+              <button class="admin__button_save price-config__batton_save button_disabled button">Сохранить</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="admin__section movie-seances">
+        <div class="admin__header">
+          <h2 class="admin__header_text">Сетка сеансов</h2>
+          <img src="./images/arrow.png" alt="Скрыть/раскрыть раздел" class="admin__header_arrow">
+        </div>
+
+        <div class="admin__wrapper">
+
+          <button class="admin__button_movie button">Добавить фильм</button>
+    
+          <div class="movie-seances__wrapper">
+          </div>
+
+          <div class="movie-seances__timelines">
+          </div>
+
+          <div class="movie-seances__buttons">
+            <button class="admin__button_cancel movie-seances__batton_cancel button_disabled button" type="reset">Отмена</button>
+            <button class="admin__button_save movie-seances__batton_save button_disabled button">Сохранить</button>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="admin__section open">
+        <div class="admin__header">
+          <h2 class="admin__header_text admin__header_text-last">Открыть продажи</h2>
+          <img src="./images/arrow.png" alt="Скрыть/раскрыть раздел" class="admin__header_arrow">
+        </div>
+
+        <div class="admin__wrapper admin__wrapper-last">
+          <p class="admin__info">Выберите зал для открытия/закрытия продаж:</p>
+
+          <ul class="halls_choose open__list">
+          </ul>
+
+          <div class="open__wrapper">
+
+            <p class="admin__info open__info">Всё готово к открытию</p>
+              
+            <button class="admin__button_open button">Открыть продажу билетов</button>
+
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <div class="popup popup__hall_add popup__hidden">
+
+    <div class="popup__container">
+
+      <div class="popup__header">
+        <h2 class="popup__header_text">Добавление зала</h2>
+
+        <div class="popup__close">
+          <img src="./images/close.png" alt="Кнопка 'Закрыть окно'">
+        </div>
+      </div>
+
+      <form class="popup__form popup__form_add-hall">
+        <label class="admin_label add-hall_label">
+          Название зала
+          <input type="text" class="admin_input add-hall_input" placeholder="Например, «Зал 1»" required>
+        </label>
+
+        <div class="popup__buttons">
+          <button class="popup__button_save popup__add-hall_button_add button" type="submit">Добавить зал</button>
+          <button class="popup__button_cancel popup__add-hall_button_cancel button" type="reset">Отменить</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class="popup popup__movie_add popup__hidden">
+
+    <div class="popup__container">
+
+      <div class="popup__header">
+        <h2 class="popup__header_text">Добавление фильма</h2>
+
+        <div class="popup__close">
+          <img src="./images/close.png" alt="Кнопка 'Закрыть окно'">
+        </div>
+      </div>
+
+      <form class="popup__form popup__form_add-movie">
+        <label class="admin_label add-movie_label">
+          Название фильма
+          <input type="text" name="movie_name" class="admin_input add-movie_name_input" placeholder="Например, «Матрица»" required>
+        </label>
+
+        <label class="admin_label add-movie_label">
+          Продолжительность фильма (мин.)
+          <input type="number" name="movie_time" class="admin_input add-movie_time_input" required>
+        </label>
+
+        <label class="admin_label add-movie_label">
+          Описание фильма
+          <textarea name="movie_synopsis" class="admin_input add-movie_synopsis_input" required></textarea>
+        </label>
+
+        <label class="admin_label add-movie_label">
+          Страна
+          <input type="text" name="movie_country" class="admin_input add-movie_country_input" required>
+        </label>
+
+        <div class="popup__buttons">
+          <button class="popup__button_save popup__add-movie_button button">Добавить фильм</button>
+
+          <label class="popup__button_save popup__add-poster_button button">
+            Загрузить постер
+            <input type="file" name="file" accept=".png" class="input_add_poster">
+          </label>
+
+          <button class="popup__button_cancel popup__add-movie_button_cancel button" type="reset">Отменить</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class="popup popup__seance_add popup__hidden">
+
+    <div class="popup__container">
+
+      <div class="popup__header">
+        <h2 class="popup__header_text">Добавление сеанса</h2>
+
+        <div class="popup__close">
+          <img src="./images/close.png" alt="Кнопка 'Закрыть окно'">
+        </div>
+      </div>
+
+      <form class="popup__form popup__form_add-seance">
+        <label class="admin_label add-seance_label">
+          Название зала
+          <select class="select__add-seance select__add-seance_hall">
+          </select>
+        </label>
+
+        <label class="admin_label add-seance_label">
+          Название фильма
+          <select class="select__add-seance select__add-seance_movie">
+          </select>
+        </label>
+
+        <label class="admin_label add-seance_label" id="seance_time">
+          Время начала
+          <input type="time" class="admin_input add-seans__input_time" value="00:00" required>
+        </label>
+
+        <div class="popup__buttons">
+          <button class="popup__button_save popup__add-seance_button_add button">Добавить сеанс</button>
+          <button class="popup__button_cancel popup__add-seance_button_cancel button" type="reset">Отменить</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class="popup popup__seance_remove popup__hidden">
+
+    <div class="popup__container">
+
+      <div class="popup__header">
+        <h2 class="popup__header_text">Удаление сеанса</h2>
+
+        <div class="popup__close">
+          <img src="./images/close.png" alt="Кнопка 'Закрыть окно'">
+        </div>
+      </div>
+
+      <div class="seance-remove_text">
+        Вы действительно хотите снять с сеанса фильм "<span class="seance-remove_title"></span>"?
+      </div>
+
+      <div class="popup__buttons">
+        <button class="popup__button_save popup__remove-seance_button_delete button">Удалить</button>
+        <button class="popup__button_cancel popup__remove-seance_button_cancel button" type="reset">Отменить</button>
+      </div>
+
+   
+    </div>
+
+  <script src="./js/admin_index.js"></script>  
+  <script src="./js/admin_halls.js"></script>
+  <script src="./js/admin_movies.js"></script>
+  <script src="./js/admin_seances.js"></script>
+
+</body>
+</html>

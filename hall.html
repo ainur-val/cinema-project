@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор мест: Идёмвкино</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__logo"><a class="header__logo_link" href="index.html">Идём<span class="header__logo_letter">в</span>кино</a></h1>
+    </header>
+
+    <main class="main buying">
+      <section class="buying__info">
+        <div class="buying__info_movie">
+          <h2 class="buying__info_title">Название фильма</h2>
+          <p class="buying__info_start">Начало сеанса: <span class="buying__info-time">00:00</span></p> 
+          <p class="buying__info_hall">Зал</p>
+        </div>  
+
+        <div class="buying__info_hint">
+          <img src="./images/hint.png" alt="Тап" class="buying__info_hint-image">
+          <div class="buying__info_hint-text">Нажмите дважды, чтобы увеличить</div>
+        </div>
+      </section>
+
+      <section class="buying__scheme">
+        <div class="buying__scheme_wrapper">
+          <div class="buying__scheme_places">
+          </div>
+        </div>
+
+        <div class="buying__scheme_legend">
+          <div class="buying__scheme_prices">
+            <p class="buying__scheme_legend-text"><span class="buying__scheme_legend-chair chair_standart"></span> Свободно (<span class="price_standart"></span>руб)</p>
+            <p class="buying__scheme_legend-text"><span class="buying__scheme_legend-chair chair_vip"></span> Свободно VIP (<span class="price_vip"></span>руб)</p>
+          </div>
+
+          <div class="buying__scheme_info">
+            <p class="buying__scheme_legend-text"><span class="buying__scheme_legend-chair chair_occupied"></span> Занято</p>
+            <p class="buying__scheme_legend-text"><span class="buying__scheme_legend-chair chair_selected"></span> Выбрано</p>
+          </div>
+        </div>
+      </section>
+
+      <button class="buying__button button buying__button_disabled">Забронировать</button>
+
+    </main>
+  </div>
+
+  <script src="./js/hall.js"></script>
+</body>
+</html>
