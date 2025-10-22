@@ -547,7 +547,7 @@ saveSessionsFilms.addEventListener("click", event => {
     }
 
     alert("Сеансы сохранены!");
-    location.reload();
+    
  }
 })
 
